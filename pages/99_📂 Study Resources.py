@@ -23,6 +23,7 @@ def main():
 
     with st.expander("PDF", expanded=False):
         download_file("SQL for Everyone.pdf", "SQL for Everyone")
+        download_file("Intro Data Architecture.pdf", "Basic of Data Engineering")
 
     with st.expander("SE Ai Item Search:", expanded=False):
         download_file("Ai_Search_structure.pdf", "Basic Structure of SE Ai Item Search")
