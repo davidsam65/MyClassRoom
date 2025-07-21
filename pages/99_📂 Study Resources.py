@@ -13,7 +13,7 @@ def download_file(filename, link_name=None):
 
     return
 
-@st.cache_data
+@st.cache_resource
 def books_download():
     with st.expander("Books & Magazines", expanded=False):
         #download_file("Hands_On_ML_Aurelien_Geron.pdf", "Hand-on Machine Learning with Scikit-Learn, Keras, and TensorFlow")
