@@ -9,7 +9,7 @@ st.set_page_config(
 
 
 def main():
-    st.image(os.path.join("assets", "ai_banner.png"), use_container_width=True)
+    st.image(os.path.join("assets", "ai_banner.png"))
 
     # st.title("👨‍🏫 Welcome to AI Engineering with Python")
     st.markdown("""
