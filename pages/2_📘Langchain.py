@@ -118,12 +118,8 @@ with st.expander("Langchain Template", expanded=False):
     import streamlit as st
     
     from langchain_ollama import ChatOllama
-    from langchain_openai import ChatOpenAI
     from langchain.prompts import PromptTemplate
     from langchain.chains import LLMChain
-    
-    import os
-    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
     
     chat = ChatOllama(
         model="llama3.2",
