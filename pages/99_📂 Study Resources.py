@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 
-@st.cache_resource
+
 def download_file(filename, link_name=None):
     file_path = f"resources/{filename}"
     with open(file_path, "rb") as f:
@@ -24,7 +24,7 @@ def main():
 
     with st.expander("PDF", expanded=False):
         download_file("SQL for Everyone.pdf", "SQL for Everyone")
-        download_file("Intro Data Architecture.pdf", "Basic of Data Engineering")
+        #download_file("Intro Data Architecture.pdf", "Basic of Data Engineering")
 
     with st.expander("SE Ai Item Search:", expanded=False):
         download_file("Ai_Search_structure.pdf", "Basic Structure of SE Ai Item Search")
