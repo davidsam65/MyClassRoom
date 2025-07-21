@@ -32,7 +32,7 @@ def main():
         unsafe_allow_html=True
     )
 
-    books_download()
+    # books_download()
 
     with st.expander("SE Ai Item Search:", expanded=False):
         download_file("Ai_Search_structure.pdf", "Basic Structure of SE Ai Item Search")
