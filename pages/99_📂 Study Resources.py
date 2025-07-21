@@ -1,7 +1,7 @@
 import streamlit as st
 import base64
 
-
+@st.cache_resource
 def download_file(filename, link_name=None):
     file_path = f"resources/{filename}"
     with open(file_path, "rb") as f:
@@ -20,6 +20,7 @@ def main():
         """,
         unsafe_allow_html=True
     )
+
 
     with st.expander("PDF", expanded=False):
         download_file("SQL for Everyone.pdf", "SQL for Everyone")
