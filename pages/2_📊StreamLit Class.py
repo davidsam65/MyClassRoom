@@ -7,7 +7,6 @@ st.set_page_config(
         initial_sidebar_state="expanded",
     )
 
-
 st.markdown("<h3 style='color: orange;'>StreamLit Example</h3>", unsafe_allow_html=True)
 with st.expander("Streamlit Dashboard Example", expanded=True):
     code_sl_project = """
