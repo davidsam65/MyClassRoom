@@ -33,6 +33,8 @@ def main():
     )
 
     # books_download()
+    with st.expander("PDF", expanded=False):
+        download_file("SQL for Everyone.pdf", "SQL for Everyone")
 
     with st.expander("SE Ai Item Search:", expanded=False):
         download_file("Ai_Search_structure.pdf", "Basic Structure of SE Ai Item Search")
