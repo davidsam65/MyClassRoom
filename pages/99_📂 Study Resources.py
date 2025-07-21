@@ -13,17 +13,6 @@ def download_file(filename, link_name=None):
 
     return
 
-@st.cache_resource
-def books_download():
-    with st.expander("Books & Magazines", expanded=False):
-        #download_file("Hands_On_ML_Aurelien_Geron.pdf", "Hand-on Machine Learning with Scikit-Learn, Keras, and TensorFlow")
-        download_file("Prompt_eng_LLMs.pdf", "Prompt Engineering for LLMs")
-        #download_file("Deep_Learning_by_Ian_Goodfellow.pdf", "Deep Learning by Ian Goodfellow")
-        download_file("python_crash_course.pdf", "Python Crash Course")
-
-    return
-
-
 def main():
     st.markdown(
         """
@@ -32,7 +21,6 @@ def main():
         unsafe_allow_html=True
     )
 
-    # books_download()
     with st.expander("PDF", expanded=False):
         download_file("SQL for Everyone.pdf", "SQL for Everyone")
 
