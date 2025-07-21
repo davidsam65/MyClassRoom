@@ -21,7 +21,6 @@ def main():
         unsafe_allow_html=True
     )
 
-
     with st.expander("PDF", expanded=False):
         download_file("SQL for Everyone.pdf", "SQL for Everyone")
 
