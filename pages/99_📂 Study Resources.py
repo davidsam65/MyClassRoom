@@ -13,6 +13,13 @@ def download_file(filename, link_name=None):
 
     return
 
+def books_download():
+    with st.expander("Books & Magazines", expanded=False):
+        download_file("Hands_On_ML_Aurelien_Geron.pdf", "Hand-on Machine Learning with Scikit-Learn, Keras, and TensorFlow")
+        download_file("Prompt_eng_LLMs.pdf", "Prompt Engineering for LLMs")
+
+    return
+
 
 def main():
     st.markdown(
@@ -22,6 +29,8 @@ def main():
         unsafe_allow_html=True
     )
 
+    books_download()
+
     with st.expander("SE Ai Item Search:", expanded=False):
         download_file("Ai_Search_structure.pdf", "Basic Structure of SE Ai Item Search")
         download_file("ER_Ai_Search.pdf", "ER Diagram of Ai Search")
@@ -29,6 +38,7 @@ def main():
 
     with st.expander("Streamlit Class:", expanded=False):
         download_file("quarterly_canada_population.csv", "Quarterly Canada Population Data")
+
 
 if __name__ == "__main__":
     main()
