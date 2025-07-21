@@ -10,7 +10,7 @@ st.set_page_config(
 st.markdown("<h3 style='color: orange;'>StreamLit Example</h3>", unsafe_allow_html=True)
 
 def display_code():
-    with st.expander("Streamlit Dashboard Example", expanded=False):
+    with st.expander("Streamlit Dashboard Example", expanded=True):
         code_sl_project = """
         import os
         import streamlit as st
