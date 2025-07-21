@@ -23,9 +23,9 @@ def main():
     )
 
     with st.expander("SE Ai Item Search:", expanded=False):
-        download_file("Ai Search structure.pdf", "Basic Structure of SE Ai Item Search")
-        download_file("ER Ai Search.pdf", "ER Diagram of Ai Search")
-        download_file("Cosine -Euclideon Similarity Theory.pdf", "Theory of Cosine and Euclidean Similarity")
+        download_file("Ai_Search_structure.pdf", "Basic Structure of SE Ai Item Search")
+        download_file("ER_Ai_Search.pdf", "ER Diagram of Ai Search")
+        download_file("Cosine_Euclideon_Similarity_Theory.pdf", "Theory of Cosine and Euclidean Similarity")
 
     with st.expander("Streamlit Class:", expanded=False):
         download_file("quarterly_canada_population.csv", "Quarterly Canada Population Data")
