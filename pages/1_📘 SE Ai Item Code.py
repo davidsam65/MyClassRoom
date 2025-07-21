@@ -7,17 +7,6 @@ st.set_page_config(
         initial_sidebar_state="expanded",
     )
 
-# st.markdown("<h1 style='color: orange;'>📘 Course Curriculums</h1>", unsafe_allow_html=True)
-
-
-# ### Week 3: LLM & Langchain Class#1
-# - Neural Networks with TensorFlow/Keras
-# - CNN, RNN, LSTM, Transformers
-#
-# ### Week 4: Real-world Applications
-# - Chatbots (LangChain, RAG)
-# - AI for Business Automation
-# """)
 
 st.markdown("<h3 style='color: orange;'>Siam East Item Code Ai Search DEMO:</h3>", unsafe_allow_html=True)
 
@@ -86,34 +75,31 @@ with st.expander("- Embedding, Vector Databases"):
 
     return
 
-    if __name__ == "__main__":
-        main()
-
     """
     st.code(code_embedding)
 
 with st.expander("- Similarity Search"):
     code_similarity = """
-    def search_similar_items(user_query, model, top_k=5):
-    # Convert vector to native Python list ✅
-    query_vector = model.encode(user_query).tolist()
-
-    query_embedding_str = "'[" + ", ".join(map(str, query_vector)) + "]'"
-
-    sql = f"
-        select e.code, m.express_desc, m.full_desc, e.embedding <=> {query_embedding_str}::vector AS similarity_score
-        from item_embeddings e
-        join item_master m on e.code = m.code
-        order by similarity_score ASC
-        limit {top_k};
-    "
-
-    db = util_db.PostgresDB()
-    db.connect()
-    df = db.fetch_dataframe(sql)
-    db.disconnect()
-
-    return df
+        def search_similar_items(user_query, model, top_k=5):
+            # Convert vector to native Python list ✅
+            query_vector = model.encode(user_query).tolist()
+        
+            query_embedding_str = "'[" + ", ".join(map(str, query_vector)) + "]'"
+        
+            sql = f"
+                select e.code, m.express_desc, m.full_desc, e.embedding <=> {query_embedding_str}::vector AS similarity_score
+                from item_embeddings e
+                join item_master m on e.code = m.code
+                order by similarity_score ASC
+                limit {top_k};
+            "
+        
+            db = util_db.PostgresDB()
+            db.connect()
+            df = db.fetch_dataframe(sql)
+            db.disconnect()
+    
+        return df
     """
     st.code(code_similarity)
 
